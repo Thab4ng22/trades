@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-dm-mono: 'DM Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #0d0f14;
+  color: #e8eaf0;
+  font-family: var(--font-syne);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+/* Card base */
+.card {
+  @apply bg-bg-3 border border-border rounded-card;
+}
+
+/* Metric card */
+.metric-card {
+  @apply bg-bg-3 border border-border rounded-card p-4;
+}
+
+/* Chart axes */
+.recharts-cartesian-axis-tick-value {
+  fill: #4d5566 !important;
+  font-size: 11px;
+  font-family: var(--font-dm-mono);
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #1e2330 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 6px !important;
+}
